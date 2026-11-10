@@ -1,0 +1,49 @@
+{
+  "name": "graphql-dashboard",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "next dev -p 3101",
+    "build": "next build",
+    "start": "next start -p 3101",
+    "seed": "tsx scripts/seed.ts",
+    "codegen": "graphql-codegen --config codegen.ts",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:e2e": "playwright test --project=e2e",
+    "screenshots": "playwright test --project=screenshots"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "2.14.0",
+    "graphql": "16.15.0",
+    "graphql-yoga": "6.0.1",
+    "next": "16.4.6",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "react-redux": "9.3.1"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "8.0.0",
+    "@graphql-codegen/client-preset": "7.0.0",
+    "@graphql-codegen/typescript": "7.0.0",
+    "@graphql-codegen/typescript-resolvers": "7.0.0",
+    "@playwright/test": "1.64.0",
+    "@tailwindcss/postcss": "4.3.5",
+    "@types/node": "24.19.2",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "eslint": "9.39.5",
+    "eslint-config-next": "16.4.6",
+    "tailwindcss": "4.3.5",
+    "tsx": "4.23.15",
+    "typescript": "5.9.3",
+    "vitest": "5.1.0"
+  },
+  "description": "A small Next.js and GraphQL dashboard for managing popup campaigns, with typed operations and optimistic updates.",
+  "engines": {
+    "node": ">=24"
+  }
+}
